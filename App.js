@@ -13,13 +13,11 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/plants', (req, res) =>{
-    const response =  fetch('https://trefle.io/api/v1/plants?token=NTl2czlzZHhXY01vejdET3ljR3ViUT09').then(response => response.json())
+    fetch('https://trefle.io/api/v1/plants?token=NTl2czlzZHhXY01vejdET3ljR3ViUT09').then(response => response.json())
     .then(data => {
-      res.send(data);
+      console.log(data);
+      res.json(data);
     });
-    // const json = await response.json();
-    // console.log(json);
-    
   })
   .get('/cool', (req, res) => res.send(cool()))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
