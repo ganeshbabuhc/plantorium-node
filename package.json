@@ -2,9 +2,9 @@
   "name": "plantorium-node",
   "version": "1.0.0",
   "description": "This example is so cool.",
-  "main": "src/App.js",
+  "main": "App.js",
   "scripts": {
-    "start": "node src/App.js",
+    "start": "node App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
