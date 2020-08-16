@@ -1,24 +1,22 @@
 {
   "name": "plantorium-node",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
+  "description": "This example is so cool.",
+  "main": "src/App.js",
   "scripts": {
     "start": "node src/App.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/getspooky/create-express-app.git"
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "jane-doe",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.9.8"
   },
-  "author": "Ganesh",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/getspooky/create-express-app/issues"
-  },
-  "homepage": "https://github.com/getspooky/create-express-app#readme"
+  "engines": {
+    "node": "10.x"
+  }
 }
