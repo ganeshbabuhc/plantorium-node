@@ -1,4 +1,4 @@
 module.exports = {
-    API_HOST : process.env.API_HOST,
-    API_TOKEN : process.env.API_TOKEN
+    API_HOST : 'https://trefle.io/api/v1/',
+    API_TOKEN : 'NTl2czlzZHhXY01vejdET3ljR3ViUT09'
 };
