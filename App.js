@@ -20,19 +20,25 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.json({"welcome_to":"plantorium"}));
+app.get('/', (req, res) => res.json({
+  "welcome_to": "plantorium"
+}));
 app.get('/cool', (req, res) => res.send(cool()))
 
 app.get('/:api/', (req, res) => {
-  console.log(req.params);
-  console.log(req.body.page);
-  const url = util.getUrl(req.params.api);
-  console.log('------url---to fetch data------', url)
-  fetch(url).then(response => response.json())
-  .then(data => {
-    console.log( console.log('------url---------', url));
-    res.json(data);
-  });
+  // console.log(req.params);
+  // console.log(req.body.page);
+  try {
+    const url = util.getUrl(req.params.api);
+    console.log('------url---to fetch data------', url)
+    fetch(url).then(response => response.json())
+      .then(data => {
+        console.log(console.log('------url---------', url));
+        res.json(data);
+      });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 
