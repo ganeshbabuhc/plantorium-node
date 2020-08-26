@@ -2,9 +2,9 @@
   "name": "plantorium-node",
   "version": "1.0.0",
   "description": "This example is so cool.",
-  "main": "server.js",
+  "main": "App.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node App.js",
     "env": "node -r dotenv/config App.js",
     "start:dev": "nodemon --watch . --exec npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
