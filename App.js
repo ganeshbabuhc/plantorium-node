@@ -35,19 +35,19 @@ app.get('/plants*', (req, res) => {
   }
 });
 
-// app.get('/plants/search', (req, res) => {
-//   try {
-//     console.log('/plants/search--')
-//     console.log(req.params);
-//     const url = util.getUrl(req.url);
-//     fetch(url).then(response => response.json()).then(data => {
-//       res.json(data);
-//     });
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
-
+app.get('/species*', (req, res) => {
+  try {
+    console.log('/species/--')
+    console.log(req);
+    const url = util.getUrl(req.url);
+    console.log(url);
+    fetch(url).then(response => response.json()).then(data => {
+      res.json(data);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
