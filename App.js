@@ -23,8 +23,7 @@ app.get('/', (req, res) => res.json({
 app.get('/cool', (req, res) => res.send(cool()))
 app.get('/plants*', (req, res) => {
   try {
-    console.log('/plants/--')
-    console.log(req);
+    console.log('/plants/--');
     const url = util.getUrl(req.url);
     console.log(url);
     fetch(url).then(response => response.json()).then(data => {
@@ -37,8 +36,7 @@ app.get('/plants*', (req, res) => {
 
 app.get('/species*', (req, res) => {
   try {
-    console.log('/species/--')
-    console.log(req);
+    console.log('/species/--');
     const url = util.getUrl(req.url);
     console.log(url);
     fetch(url).then(response => response.json()).then(data => {
